@@ -24,17 +24,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Container buildTextContainer() {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.all(16),
-      child: Text(
-        'Mercedes-Benz, commonly referred to as Mercedes, is both a German automotive marque and, from late 2019 onwards, a subsidiary – as Mercedes-Benz AG – of Daimler AG. Mercedes-Benz is known for producing luxury vehicles and commercial vehicles. The headquarters is in Stuttgart, Baden-Württemberg',
-        style: TextStyle(fontSize: 18, color: Colors.blue),
-      ),
-    );
-  }
-
   Container buildNavTextTitleSection() {
     return Container(
       decoration: BoxDecoration(
@@ -47,6 +36,47 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+
+  Container buildNavITSection() {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Column(
+            children: [
+              Icon(Icons.call, color: Colors.blue, size: 30),
+              Text('Call',style: TextStyle(fontSize: 18, color: Colors.blue),),
+            ],
+          ),
+          Column(
+            children: [
+              Icon(Icons.send_sharp, color: Colors.blue, size: 30),
+              Text('Route',style: TextStyle(fontSize: 18, color: Colors.blue),),
+            ],
+          ),
+          Column(
+            children: [
+              Icon(Icons.share,color: Colors.blue,size: 30,),
+              Text('Share',style: TextStyle(fontSize: 18, color: Colors.blue),),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container buildTextContainer() {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
+      child: Text(
+        'Mercedes-Benz, commonly referred to as Mercedes, is both a German automotive marque and, from late 2019 onwards, a subsidiary – as Mercedes-Benz AG – of Daimler AG. Mercedes-Benz is known for producing luxury vehicles and commercial vehicles. The headquarters is in Stuttgart, Baden-Württemberg',
+        style: TextStyle(fontSize: 18, color: Colors.blue),
+      ),
+    );
+  }
+
 
   Column buildTitleDescColumn() {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -74,10 +104,7 @@ class HomePage extends StatelessWidget {
     return Row(
       children: [
         Icon(Icons.star, color: Colors.red),
-        Text(
-          '99',
-          style: TextStyle(fontSize: 16),
-        ),
+        Text('99',style: TextStyle(fontSize: 16),),
       ],
     );
   }
@@ -86,62 +113,14 @@ class HomePage extends StatelessWidget {
     return Column(
       children: [
         Icon(Icons.call, color: Colors.blue),
-        Text(
-          'Call',
-          style: TextStyle(fontSize: 16),
-        ),
+        Text('Call',style: TextStyle(fontSize: 16),),
         Icon(Icons.send_sharp, color: Colors.blue),
-        Text(
-          'Route',
-          style: TextStyle(fontSize: 16),
-        ),
+        Text('Route',style: TextStyle(fontSize: 16),),
         Icon(Icons.share, color: Colors.blue),
-        Text(
-          'Share',
-          style: TextStyle(fontSize: 16),
-        ),
+        Text('Share',style: TextStyle(fontSize: 16),),
       ],
     );
   }
 
-  Container buildNavITSection() {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Column(
-            children: [
-              Icon(Icons.call, color: Colors.blue, size: 30),
-              Text(
-                'Call',
-                style: TextStyle(fontSize: 18, color: Colors.blue),
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              Icon(Icons.send_sharp, color: Colors.blue, size: 30),
-              Text(
-                'Route',
-                style: TextStyle(fontSize: 18, color: Colors.blue),
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              Icon(
-                Icons.share,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Text(
-                'Share',
-                style: TextStyle(fontSize: 18, color: Colors.blue),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+
 }
